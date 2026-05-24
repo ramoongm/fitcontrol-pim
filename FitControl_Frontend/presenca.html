@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PresenÃ§a - FitControl</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-area">
+
+    <h2>FitControl</h2>
+
+    <button class="close-btn" id="closeMenu">
+        <i class='bx bx-x'></i>
+    </button>
+
+</div>
+
+    <nav>
+      <a href="dashboard.html"><i class='bx bxs-dashboard'></i> Dashboard</a>
+      <a href="alunos.html"><i class='bx bxs-user'></i> Alunos</a>
+      <a href="professores.html"><i class='bx bxs-id-card'></i> Professores</a>
+      <a href="planos.html"><i class='bx bxs-wallet'></i> Planos</a>
+      <a href="matriculas.html"><i class='bx bxs-user-check'></i> MatrÃ­culas</a>
+      <a href="pagamentos.html"><i class='bx bxs-credit-card'></i> Pagamentos</a>
+      <a href="presenca.html" class="active-link"><i class='bx bxs-calendar'></i> PresenÃ§a</a>
+      <a href="treinos.html" ><i class='bx bx-dumbbell'></i><span>Treinos</span></a>
+      <a href="relatorios.html"><i class='bx bxs-bar-chart-alt-2'></i> RelatÃ³rios</a>
+   
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="header">
+      <div class="header-left">
+        <button class="menu-btn" id="openMenu">
+          <i class='bx bx-menu'></i>
+        </button>
+        <h1>Controle de PresenÃ§a</h1>
+      </div>
+
+      <div class="user">
+        <i class='bx bxs-user-circle'></i>
+        <span>Admin</span>
+      </div>
+    </header>
+
+    <section class="cards">
+      <div class="card">
+        <i class='bx bxs-user-check'></i>
+        <div>
+          <h3>Presentes Hoje</h3>
+          <p id="presentesHoje">0</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <i class='bx bxs-time-five'></i>
+        <div>
+          <h3>Ãšltimo HorÃ¡rio</h3>
+          <p id="ultimoHorario">-</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <i class='bx bxs-calendar-check'></i>
+        <div>
+          <h3>FrequÃªncia Registrada</h3>
+          <p id="totalRegistros">0</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <i class='bx bxs-group'></i>
+        <div>
+          <h3>Alunos Ativos</h3>
+          <p id="totalAlunos">0</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <h2>Registrar PresenÃ§a</h2>
+      <div class="table-wrapper" style="padding: 20px;">
+        <form id="formPresenca" style="display: grid; gap: 12px;">
+          <select id="aluno" required>
+            <option value="">Selecione o aluno</option>
+          </select>
+
+          <input type="date" id="dataPresenca" required>
+
+          <input type="time" id="horarioEntrada" required>
+
+          <select id="statusPresenca" required>
+            <option value="">Selecione o status</option>
+            <option value="Presente">Presente</option>
+            <option value="Faltou">Faltou</option>
+          </select>
+
+          <button type="submit">Registrar PresenÃ§a</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <h2>Registro de PresenÃ§a</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Nome do Aluno</th>
+              <th>Data</th>
+              <th>HorÃ¡rio de Entrada</th>
+              <th>PresenÃ§a</th>
+            </tr>
+          </thead>
+          <tbody id="listaPresencas">
+            <tr>
+              <td colspan="4">Nenhuma presenÃ§a registrada.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script src="./js/user.js"></script>
+  <script src="./js/fitcontrol-data.js"></script>
+  <script src="./js/presenca.js"></script>
+</body>
+</html>
+
+

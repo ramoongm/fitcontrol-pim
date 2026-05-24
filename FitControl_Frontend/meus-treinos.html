@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus Treinos - Fit Control</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-area">
+
+    <h2>FitControl</h2>
+
+    <button class="close-btn" id="closeMenu">
+        <i class='bx bx-x'></i>
+    </button>
+
+</div>
+
+    <nav>
+      <a href="aluno-dashboard.html"><i class='bx bxs-dashboard'></i> InÃ­cio</a>
+      <a href="meus-treinos.html"class="active-link"><i class='bx bx-dumbbell'></i>Meus Treinos</a>
+      <a href="meu-plano.html"><i class='bx bxs-wallet'></i> Meu Plano</a>
+      <a href="presenca-aluno.html"><i class='bx bxs-calendar'></i> Minha FrequÃªncia</a>
+     
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="header">
+      <div class="header-left">
+        <button class="menu-btn" id="openMenu">
+          <i class='bx bx-menu'></i>
+        </button>
+        <h1>Meus Treinos</h1>
+      </div>
+
+      <div class="user" id="userMenu">
+        <i class='bx bxs-user-circle'></i>
+        <span id="nomeUsuario">Aluno</span>
+        <i class='bx bx-chevron-down'></i>
+
+        <div class="dropdown" id="dropdownMenu">
+          <button id="trocarUsuario">Trocar usuÃ¡rio</button>
+          <button id="logout">Sair</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="cards">
+      <div class="card">
+        <i class='bx bx-dumbbell'></i>
+        <div>
+          <h3>Treino de Hoje</h3>
+          <p>Treino A</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <i class='bx bx-target-lock'></i>
+        <div>
+          <h3>Foco</h3>
+          <p>Peito e TrÃ­ceps</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <i class='bx bx-list-ul'></i>
+        <div>
+          <h3>ExercÃ­cios</h3>
+          <p>5</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <i class='bx bxs-timer'></i>
+        <div>
+          <h3>DuraÃ§Ã£o MÃ©dia</h3>
+          <p>50 min</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <h2>Ficha de Treino</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>ExercÃ­cio</th>
+              <th>SÃ©ries</th>
+              <th>RepetiÃ§Ãµes</th>
+              <th>ObservaÃ§Ã£o</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaTreinos">
+            <tr>
+              <td>Supino reto</td>
+              <td>4</td>
+              <td>12</td>
+              <td>Carga moderada</td>
+            </tr>
+            <tr>
+              <td>Supino inclinado</td>
+              <td>3</td>
+              <td>12</td>
+              <td>Controle na descida</td>
+            </tr>
+            <tr>
+              <td>Crucifixo</td>
+              <td>3</td>
+              <td>15</td>
+              <td>Movimento completo</td>
+            </tr>
+            <tr>
+              <td>TrÃ­ceps pulley</td>
+              <td>4</td>
+              <td>12</td>
+              <td>Sem balanÃ§ar o corpo</td>
+            </tr>
+            <tr>
+              <td>TrÃ­ceps francÃªs</td>
+              <td>3</td>
+              <td>12</td>
+              <td>ExecuÃ§Ã£o lenta</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+  <script src="./js/meus-treinos.js"></script>
+  <script src="./js/user.js"></script>
+</body>
+</html>
+

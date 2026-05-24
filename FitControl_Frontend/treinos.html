@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Treinos - FitControl</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-area">
+
+    <h2>FitControl</h2>
+
+    <button class="close-btn" id="closeMenu">
+        <i class='bx bx-x'></i>
+    </button>
+
+</div>
+    <nav>
+      <a href="dashboard.html"><i class='bx bxs-dashboard'></i> Dashboard</a>
+      <a href="alunos.html"><i class='bx bxs-user'></i> Alunos</a>
+      <a href="professores.html"><i class='bx bxs-id-card'></i> Professores</a>
+      <a href="planos.html"><i class='bx bxs-wallet'></i> Planos</a>
+      <a href="matriculas.html"><i class='bx bxs-user-check'></i> MatrÃ­culas</a>
+      <a href="pagamentos.html"><i class='bx bxs-credit-card'></i> Pagamentos</a>
+      <a href="presenca.html"><i class='bx bxs-calendar'></i> PresenÃ§a</a>
+      <a href="treinos.html" class="active-link"><i class='bx bx-dumbbell'></i><span>Treinos</span></a>
+      <a href="relatorios.html"><i class='bx bxs-bar-chart-alt-2'></i> RelatÃ³rios</a>
+   
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="header">
+      <div class="header-left">
+        <button class="menu-btn" id="openMenu"><i class='bx bx-menu'></i></button>
+        <h1>Treinos</h1>
+      </div>
+      <div class="user" id="userMenu">
+        <i class='bx bxs-user-circle'></i><span id="nomeUsuario">Admin</span><i class='bx bx-chevron-down'></i>
+        <div class="dropdown" id="dropdownMenu"><button id="trocarUsuario">Trocar usuÃ¡rio</button><button id="logout">Sair</button></div>
+      </div>
+    </header>
+    <section class="table-section">
+      <h2>Novo Treino</h2>
+      <form id="formTreino" class="form-aluno">
+        <div class="form-grid">
+          <select id="alunoTreino" required><option value="">Selecione o aluno</option></select>
+          <select id="professorTreino" required><option value="">Selecione o professor</option></select>
+          <input type="text" id="nomeTreino" placeholder="Nome do treino" required>
+          <input type="date" id="dataInicioTreino" title="Data de inÃ­cio" required>
+          <textarea id="exerciciosTreino" placeholder="ExercÃ­cios do treino" required></textarea>
+          <textarea id="observacoesTreino" placeholder="ObservaÃ§Ãµes"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Cadastrar Treino</button>
+      </form>
+    </section>
+    <section class="table-section" style="margin-top:20px;">
+      <div class="titulo-treino">
+    <i class='bx bx-heart-circle'></i>
+    <h2>Treinos Cadastrados</h2>
+</div><div class="table-wrapper"><table><thead><tr><th>Aluno</th><th>Professor</th><th>Treino</th><th>Data</th><th>ExercÃ­cios</th></tr></thead><tbody id="listaTreinos"></tbody></table></div>
+    </section>
+  </main>
+
+  <div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+  <script src="./js/user.js"></script>
+  <script src="./js/fitcontrol-data.js"></script>
+  <script src="./js/treinos.js"></script>
+</body>
+</html>
+
+
+
+JavaScript

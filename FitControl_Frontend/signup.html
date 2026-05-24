@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro FitControl</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+  <main class="container">
+    <form id="signupForm">
+      <h1>Cadastro FitControl</h1>
+
+      <div class="input-box">
+        <input type="text" id="nome" placeholder="Nome completo" required>
+        <i class='bx bxs-user'></i>
+      </div>
+
+      <div class="input-box">
+        <input type="text" id="novoUsuario" placeholder="UsuÃ¡rio" required>
+        <i class='bx bxs-user-account'></i>
+      </div>
+
+      <div class="input-box">
+        <input type="email" id="email" placeholder="E-mail" required>
+        <i class='bx bxs-envelope'></i>
+      </div>
+
+      <div class="input-box">
+        <input type="password" id="novaSenha" placeholder="Senha" required>
+        <i class='bx bxs-lock-alt'></i>
+      </div>
+
+      <div class="input-box">
+        <input type="password" id="confirmarSenha" placeholder="Confirmar senha" required>
+        <i class='bx bxs-lock'></i>
+      </div>
+
+      <div class="input-box">
+        <select id="tipoUsuario" required>
+          <option value="">Tipo de usuÃ¡rio</option>
+          <option value="aluno">Aluno</option>
+          <option value="professor">Professor</option>
+          <option value="admin">Administrador</option>
+        </select>
+        <i class='bx bxs-group'></i>
+      </div>
+
+      <button type="submit" class="login">Cadastrar</button>
+
+      <div class="register-link">
+        <p>JÃ¡ tem uma conta? <a href="./index.html">Entrar</a></p>
+      </div>
+    </form>
+  </main>
+
+  <div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+  <script src="./js/signup.js"></script>
+</body>
+</html>
+
+
+

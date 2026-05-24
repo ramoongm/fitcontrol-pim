@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha FrequÃªncia - Fit Control</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-area">
+
+    <h2>FitControl</h2>
+
+    <button class="close-btn" id="closeMenu">
+        <i class='bx bx-x'></i>
+    </button>
+
+</div>
+
+    <nav>
+      <a href="aluno-dashboard.html"><i class='bx bxs-dashboard'></i> InÃ­cio</a>
+      <a href="meus-treinos.html"><i class='bx bx-dumbbell'></i>Meus Treinos</a>
+      <a href="meu-plano.html"><i class='bx bxs-wallet'></i> Meu Plano</a>
+      <a href="presenca-aluno.html" class="active-link"><i class='bx bxs-calendar'></i> Minha FrequÃªncia</a>
+     
+     
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="header">
+      <div class="header-left">
+        <button class="menu-btn" id="openMenu">
+          <i class='bx bx-menu'></i>
+        </button>
+        <h1>Minha FrequÃªncia</h1>
+      </div>
+
+      <div class="user" id="userMenu">
+        <i class='bx bxs-user-circle'></i>
+        <span id="nomeUsuario">Aluno</span>
+        <i class='bx bx-chevron-down'></i>
+
+        <div class="dropdown" id="dropdownMenu">
+          <button id="trocarUsuario">Trocar usuÃ¡rio</button>
+          <button id="logout">Sair</button>
+        </div>
+      </div>
+    </header>
+
+    <section class="cards">
+      <div class="card">
+        <i class='bx bxs-check-circle'></i>
+        <div>
+          <h3>PresenÃ§as no mÃªs</h3>
+          <p id="totalPresencas">0</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <i class='bx bxs-calendar'></i>
+        <div>
+          <h3>FrequÃªncia</h3>
+          <p id="percentualFrequencia">0%</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <i class='bx bxs-time'></i>
+        <div>
+          <h3>Ãšltima presenÃ§a</h3>
+          <p id="ultimaPresenca">-</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <i class='bx bxs-bar-chart-alt-2'></i>
+        <div>
+          <h3>Status</h3>
+          <p id="statusFrequencia">Sem dados</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <h2>HistÃ³rico de PresenÃ§a</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="tabelaPresencaAluno">
+            <tr>
+              <td colspan="2">Nenhum registro encontrado.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <script src="./js/presenca-aluno.js"></script>
+  <script src="./js/user.js"></script>
+</body>
+</html>
+
+

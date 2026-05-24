@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Alunos - FitControl</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-area">
+
+    <h2>FitControl</h2>
+
+    <button class="close-btn" id="closeMenu">
+        <i class='bx bx-x'></i>
+    </button>
+
+</div>
+
+    <nav>
+      <a href="dashboard.html"><i class='bx bxs-dashboard'></i> Dashboard</a>
+      <a href="alunos.html" class="active-link"><i class='bx bxs-user'></i> Alunos</a>
+      <a href="professores.html"><i class='bx bxs-id-card'></i> Professores</a>
+      <a href="planos.html"><i class='bx bxs-wallet'></i> Planos</a>
+      <a href="matriculas.html"><i class='bx bxs-user-check'></i> MatrÃ­culas</a>
+      <a href="pagamentos.html"><i class='bx bxs-credit-card'></i> Pagamentos</a>
+      <a href="presenca.html"><i class='bx bxs-calendar'></i> PresenÃ§a</a>
+      <a href="treinos.html" ><i class='bx bx-dumbbell'></i><span>Treinos</span></a>
+      <a href="relatorios.html"><i class='bx bxs-bar-chart-alt-2'></i> RelatÃ³rios</a>
+     
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="header">
+      <div class="header-left">
+        <button class="menu-btn" id="openMenu">
+          <i class='bx bx-menu'></i>
+        </button>
+        <h1>Cadastro de Alunos</h1>
+      </div>
+    </header>
+
+    <section class="table-section">
+      <h2>Novo Aluno</h2>
+
+      <form id="formAluno" class="form-aluno">
+        <div class="form-grid">
+          <input type="text" id="nome" placeholder="Nome do aluno" required>
+          <input type="text" id="cpf" placeholder="CPF" required>
+          <input type="email" id="email" placeholder="E-mail" required>
+          <input type="text" id="telefone" placeholder="Telefone" required>
+          <input type="date" id="dataNascimento" title="Data de nascimento" required>
+          <input type="text" id="endereco" placeholder="EndereÃ§o" required>
+        </div>
+
+        <button type="submit" class="btn-submit">Cadastrar Aluno</button>
+      </form>
+    </section>
+
+    <section class="table-section" style="margin-top: 20px;">
+      <h2>Alunos Cadastrados</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>E-mail</th>
+              <th>Telefone</th>
+              <th>CPF</th>
+            </tr>
+          </thead>
+          <tbody id="listaAlunos"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+
+  <div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+  <script src="./js/user.js"></script>
+  <script src="./js/alunos.js"></script>
+</body>
+</html>
+
+

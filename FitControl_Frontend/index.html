@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login FitControl</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+   
+    <main class="container">  
+        <form id="loginForm">
+            <h1>Login FitControl</h1>
+
+            <div class="input-box">
+                <input placeholder="UsuÃ¡rio" type="text" id="usuario" required>
+                <i class="bx bxs-user"></i>
+            </div>
+
+            <div class="input-box">
+                <input placeholder="Senha" type="password" id="senha" required>
+                <i class="bx bxs-lock-alt"></i>
+            </div>
+
+            <div class="forgot-password">
+                <a href="esqueci-senha.html">Esqueci minha senha</a>
+            </div>
+
+            <div class="remember-forgot">
+                <label>
+                    <input type="checkbox">
+                    Lembrar senha
+            </div>
+
+            <button type="submit" class="login">Entrar</button>
+
+            <div class="register-link">
+                <p>NÃ£o tem uma conta? <a href="./signup.html">Cadastre-se</a></p>
+            </div>
+        </form>
+    </main>
+
+    <div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper>
+    <div class="vw-plugin-top-wrapper"></div>
+  </div>
+</div>
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
+
+
+matrÃ­culas.html:
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MatrÃ­culas - FitControl</title>
+  <link rel="stylesheet" href="css/dashboard.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <div class="logo-area">
+
+    <h2>FitControl</h2>
+
+    <button class="close-btn" id="closeMenu">
+        <i class='bx bx-x'></i>
+    </button>
+
+</div>
+    <nav>
+      <a href="dashboard.html"><i class='bx bxs-dashboard'></i> Dashboard</a>
+      <a href="alunos.html"><i class='bx bxs-user'></i> Alunos</a>
+      <a href="professores.html"><i class='bx bxs-id-card'></i> Professores</a>
+      <a href="planos.html"><i class='bx bxs-wallet'></i> Planos</a>
+      <a href="matriculas.html" class="active-link"><i class='bx bxs-user-check'></i> MatrÃ­culas</a>
+      <a href="pagamentos.html"><i class='bx bxs-credit-card'></i> Pagamentos</a>
+      <a href="presenca.html"><i class='bx bxs-calendar'></i> PresenÃ§a</a>
+      <a href="treinos.html" ><i class='bx bx-dumbbell'></i><span>Treinos</span></a>
+      <a href="relatorios.html"><i class='bx bxs-bar-chart-alt-2'></i> RelatÃ³rios</a>
+     
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="header">
+      <div class="header-left">
+        <button class="menu-btn" id="openMenu"><i class='bx bx-menu'></i></button>
+        <h1>MatrÃ­culas</h1>
+      </div>
+      <div class="user" id="userMenu">
+        <i class='bx bxs-user-circle'></i><span id="nomeUsuario">Admin</span><i class='bx bx-chevron-down'></i>
+        <div class="dropdown" id="dropdownMenu"><button id="trocarUsuario">Trocar usuÃ¡rio</button><button id="logout">Sair</button></div>
+      </div>
+    </header>
+    <section class="table-section">
+      <h2>Nova MatrÃ­cula</h2>
+      <form id="formMatricula" class="form-aluno">
+        <div class="form-grid">
+          <select id="alunoMatricula" required><option value="">Selecione o aluno</option></select>
+          <select id="plano" required>
+               <option value="">Selecione o plano</option>
+               <option value="Mensal">Mensal</option>
+               <option value="Semestral">Semestral</option>
+               <option value="Anual">Anual</option>
+          </select>
+          <input type="date" id="dataInicio" title="Data de inÃ­cio" required>
+          <input type="date" id="dataFim" title="Data de fim" required>
+          <select id="statusMatricula" required><option value="Ativa">Ativa</option><option value="Encerrada">Encerrada</option><option value="Cancelada">Cancelada</option></select>
+        </div>
+        <button type="submit" class="btn-submit">Cadastrar MatrÃ­cula</button>
+      </form>
+    </section>
+    <section class="table-section" style="margin-top:20px;">
+      <h2>MatrÃ­culas Cadastradas</h2><div class="table-wrapper"><table><thead><tr><th>Aluno</th><th>Plano</th><th>InÃ­cio</th><th>Fim</th><th>Status</th></tr></thead><tbody id="listaMatriculas"></tbody></table></div>
+    </section>
+  </main>
+
+  <div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+  <script src="./js/user.js"></script>
+  <script src="./js/fitcontrol-data.js"></script>
+  <script src="./js/matriculas.js"></script>
+</body>
+</html>
+
+
